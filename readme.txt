@@ -1,4 +1,6 @@
-O script    npm run dev    so ira funcionar com a versao do node superior a v18.11.0
+O script:
+    npm run dev    
+so ira funcionar com a versao do node superior a v18.11.0
 
 Criar um aplicativo console em nodejs que implemente os seguintes requisitos.
 
