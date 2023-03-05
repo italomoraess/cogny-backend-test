@@ -67,18 +67,21 @@ const urlApi = 'https://datausa.io/api/data?drilldowns=Nation&measures=Populatio
     try {
         await migrationUp();
 
-        //exemplo de insert
         const requestData = async () => {
             const { data: { data } } = await axios.get(urlApi);
-            return data
-        }
+            return data;
+        };
 
-        console.log('Data => ', await requestData())
+        console.log('Data => ', data);
 
-        // const result1 = await db[DATABASE_SCHEMA].api_data.insert({
-        //     doc_record: { 'a': 'b' },
-        // })
-        // console.log('result1 >>>', result1);
+        //exemplo de insert
+        const data = await requestData();
+
+        data.map(async (d) => {
+            await db[DATABASE_SCHEMA].api_data.insert({
+                doc_record: d,
+            });
+        });
 
         //exemplo select
         // const result2 = await db[DATABASE_SCHEMA].api_data.find({
