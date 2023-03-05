@@ -1,3 +1,5 @@
+O script    npm run dev    so ira funcionar com a versao do node superior a v18.11.0
+
 Criar um aplicativo console em nodejs que implemente os seguintes requisitos.
 
 1. Consumir a API (https://datausa.io/api/data?drilldowns=Nation&measures=Population) e gravar o resultado na tabela "api_data" no na coluna "doc_record".
